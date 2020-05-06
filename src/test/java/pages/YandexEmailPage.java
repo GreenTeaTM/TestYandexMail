@@ -8,19 +8,19 @@ public class YandexEmailPage extends BasePage {
     @FindBy (className = "mail-Message-Toolbar-Subject-Wrapper")
     private WebElement MessageSubject;
 
-    @FindBy (xpath = "//*[@id=\"nb-1\"]/body/div[2]/div[5]/div/div[3]/div[3]/div[2]/div[5]/div[1]/div/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/span[1]")
+    @FindBy (xpath = "//*[contains(@class, 'mail-ui-HoverLink')]")
     private WebElement NameSender;
 
-    @FindBy (xpath = "//*[@id=\"nb-1\"]/body/div[2]/div[5]/div/div[3]/div[3]/div[2]/div[5]/div[1]/div/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/span[2]/span[1]")
+    @FindBy (xpath = "//*[contains(@class, 'mail-ui-HoverLink-Content')]")
     private WebElement EmailSender;
 
     @FindBy (className = "mail-Message-Body-Content")
     private WebElement MailBody;
 
-    @FindBy (xpath = "//*[@id=\"nb-1\"]/body/div[2]/div[5]/div/div[2]/div/div/header/div/div[5]/div[2]/a[1]")
+    @FindBy (className = "user-account__name")
     private WebElement ShowMenu;
 
-    @FindBy (xpath = "//*[@id=\"nb-1\"]/body/div[2]/div[5]/div/div[2]/div/div/header/div/div[5]/div[2]/div/ul/ul/li[5]/a")
+    @FindBy (xpath = "//*[contains(@class, 'legouser__menu-item_action_exit')]")
     private WebElement Logout;
 
     public YandexEmailPage (WebDriver driver) {
